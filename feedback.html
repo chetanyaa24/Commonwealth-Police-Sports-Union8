@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .F2.center-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: #ddd;
+    border-radius: 15px;
+    padding: 20px 15px;
+    margin: 40px auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}
+
+.F2.center-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.F2.center-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.F2.description {
+    text-align: center;
+    font-size: 20px;
+    color: #090808;
+    max-width: 90%;
+    padding: 10px;
+    word-wrap: break-word;
+    line-height: 2;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.F1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #e0e0e0;
+    border: 2px solid #39396F;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.F1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.F3 {
+    text-align: left;
+    flex-grow: 1;
+    padding: 10px;
+    line-height: 2;
+}
+
+.F4 {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #2e2d2d;
+}
+
+@media screen and (max-width: 768px) {
+    .F1 {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .F2 {
+        margin-bottom: 10px;
+    }
+}
+</style>
+<body>
+    <div id="splash-screen">
+        <img src="images/logo.jpg" alt="Logo">
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo">
+            <div class="navbar-titles">
+                <div class="navbar-title primary">Commonwealth Police Sports Union</div>
+                <div class="navbar-title secondary">Unión deportiva de la policía de la Commonwealth</div>
+                <div class="navbar-title third">राष्ट्रमण्डल पुलिस खेल संघ</div>
+            </div>
+        </div>
+    
+        <!-- Hamburger Menu for Mobile/Tablet -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preamble.html">Preamble</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="feedback.html">Activity</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="F2 center-card" id="f6" onmouseover="celebrate()">
+        <img src="images/person2.png" alt="Celebration">
+        <div class="F2 description">
+            <p>On India's 76th Republic Day, celebrations reached new heights with the virtual launch of the Commonwealth Police Sports Union website. This momentous occasion was graced by the esteemed presence of Shri Somesh Goyal, a distinguished IPS officer, who inaugurated the website on Google Meet.</p>
+        </div>
+    </div>
+
+    <div class="feedback-container">
+        <div class="F1 left-card" id="f1">
+            <img src="images/person13.jpg" alt="Person 1" class="F2"> 
+            <div class="F3">
+                <p>The role of sports in fostering esprit de corps and leadership qualities is well recognised. Recognising the contribution of sports in shaping him, the Duke of Wellington, after the victory of his forces in the battle of Waterloo, is chronicled to have remarked that “the battle of Waterloo was won at the field of Eton “
+                    The Commonwealth Police Sports Union is committed to fostering the culture of sports and camaraderie amongst the police personnel of the Commonwealth countries.
+                    
+                </p>
+                <span class="F4">Sunil Kumar Mall (IRS: 1992)</span>
+            </div>
+        </div>
+
+        <div class="F1 right-card" id="f2">
+            <div class="F3">
+                <p>Congratulations to all on this important first step. Great to connect with you all seniors and friends.</p>
+                <span class="F4">Sanjay Kundu (IPS: 1989)</span>
+            </div>
+            <img src="images/person10.jpg" alt="Person 2" class="F2"> 
+        </div>
+
+        <div class="F1 left-card" id="f3">
+            <img src="images/person11.jpg" alt="Person 3" class="F2"> 
+            <div class="F3">
+                <p>It is quite heartening to know that Commonwealth Police Sports Union ( CPSU) has launched its own website. 
+                    This will help quick and prompt dissemination of sports related information and provide a digital platform for exchange of related ideas. It will also foster better coordination between sports teams , players and managers. On the occasion of its launch on the Republic Day I extend my hearty congratulations to all members and functionaries associated with the organisation. Best wishes for the success of the website and the organisation . 
+                    Jai Hind 
+                    </p>
+                <span class="F4">Umesh Mishra (IPS: 1989)</span>
+            </div>
+        </div>
+    </div>
+    
+
+        <footer class="footer">
+            <div class="left">
+                <p>&copy; 2025 Commonwealth Police Sports Union. All rights reserved.</p>
+                <p class="tagline">Unión deportiva de la policía de la Commonwealth</p>
+            </div>
+            <div class="right">
+                <p>Email: <a href="mailto:office@commonwealthpolicesportsunion.org">office@commonwealthpolicesportsunion.org</a></p>
+                <p>Contact No: +917665664655</p>
+            </div>
+        </footer>
+        
+        
+            </div>
+            <script src="script.js"></script>
+</body>
+</html>
